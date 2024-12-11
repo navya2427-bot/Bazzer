@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width", intial scale="1.0">
+<title>All Products  -  Bazaar</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+    <div class="container">
+    <div class="navbar">
+  <div class="logo">
+     <a href="index.html"><img src="logo2.png" width="125px"></a>
+</div>
+<nav>
+    <ul id="MenuItems">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+         <li><a href="">About</a></li>
+         <li><a href="">Contacts</a></li>
+         <li><a href="account.html">Account</a></li>
+    </ul>
+</nav>
+<a href="cart.html"><img src="shopping-bag.png" width="30px" height="30px"></a>
+<img src="menu.png" class="menu-icon"
+ onclick="menutoggle()">
+    </div>
+    </div>
+<!----------- account-page----------->
+
+<div class="account-page">
+    <div class="container">
+    <div class="row">
+        <div class="col-2">
+            <img src="layout.jpg" width="100%">
+        </div>
+        <div class="col-2">
+            <div class="form-container">
+                <div class="form-btn">
+                    <span onclick="login()">Login</span>
+                    <span onclick="register()">Register</span>
+                    <hr id="Indicator">
+                 </div>
+
+                 <form id="LoginForm">
+                    <input type="text" placeholder="UserName">
+                    <input type="Password" placeholder="Password">
+                    <button type="submit" class="btn">Login</button>
+                    <a href="">Forgot Password</a>
+                 </form>
+
+                 <form>
+                    <form id="RegForm">
+                        <input type="text" placeholder="UserName">
+                        <input type="email" placeholder="Email">
+                        <input type="Password" placeholder="Password">
+                    <button type="submit" class="btn">Register</button>
+                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+   <!-------footer------->
+
+   <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="play store.jpg">
+                    <img src="app store2.jpg" >
+                </div>
+            </div>
+            <div class="footer-col-2">
+               <img src="logo2.png " width="70px" height="70px">
+                <p>Our Purpose Is To delivery Your favorite Brands & many in perfect Time</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Jion Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div> 
+       <hr>
+       <p class="Copyright">Copyright 2024 - Bazaar</p>
+    </div>
+   </div>
+</div>
+<!-------------js for toggle menu --------->
+<script>
+    var MenuItems= document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px" );
+    {
+        MenuItems.style.maxHeight = "200px";
+    }
+     else {
+        MenuItems.style.maxHeight = "0px";
+    }
+    }
+</script>
+
+<!----------js for toggle form--------->
+<script>
+var LoginForm = document.getElementById("LoginForm");
+var RegForm = document.getElementById("RegForm");
+var Indicator = document.getElementById("Indicator");
+
+// Set initial state
+LoginForm.style.transform = "translateX(0px)";
+RegForm.style.transform = "translateX(300px)";
+Indicator.style.transform = "translateX(0px)";
+
+function register() {
+    RegForm .style.transform = "translateX(0px)"; // Move RegForm into view
+    LoginForm.style.transform = "translateX(0px)"; // Move LoginForm out of view
+    Indicator.style.transform = "translateX(100px)"; // Move Indicator to the right
+}
+
+function login() {
+    RegForm.style.transform = "translateX(300px)"; // Move RegForm out of view
+    LoginForm.style.transform = "translateX(300px)"; // Move LoginForm into view
+    Indicator.style.transform = "translateX(0px)"; // Move Indicator to the left
+}
+
+</script>
+
+
+</body>
+</html>
